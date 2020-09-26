@@ -10,25 +10,25 @@ import javax.persistence.Table;
 public class User {
 	@Id
 	@Column(name = "uname")
-	public String uname;
+	private String uname;
 	@Column(name = "uemail")
-	public String uemail;
+	private String uemail;
 	@Column(name = "upwd")
-	public String upwd;
+	private String upwd;
 	@Column(name = "ucontact")
-	public String ucontact;
+	private String ucontact;
 	@Column(name = "Name")
-	public String Name;
+	private String Name;
 	@Column(name = "ubankacct")
-	public String ubankacct;
+	private String ubankacct;
 	@Column(name = "uifsc")
-	public String uifsc;
+	private String uifsc;
 	@Column(name = "uaddress")
-	public String uaddress;
+	private String uaddress;
 	@Column(name = "ucardtype")
-	public String ucardtype;
+	private String ucardtype;
 	@Column(name = "status")
-	public String approvalstatus;
+	private String approvalstatus;
 	public String getUname() {
 		return uname;
 	}
