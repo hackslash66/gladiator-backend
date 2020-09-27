@@ -3,7 +3,10 @@ package com.lti.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "products")
@@ -17,7 +20,9 @@ public class Product {
 	private String pdetails;
 	@Column
 	private double prate;
-	
+	@ManyToOne
+	@JoinColumn(name = "uname")
+	private User user;
 	public int getPid() {
 		return pid;
 	}
@@ -45,4 +50,11 @@ public class Product {
 	public void setPrate(double prate) {
 		this.prate = prate;
 	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
 }
